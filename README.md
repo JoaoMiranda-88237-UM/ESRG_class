@@ -20,13 +20,13 @@
         In client: ./client "print message"
 
     [MESSAGE QUEUES - TCP]    
-    -Send a message to server and reply to others clients:
+    -Send a message to server and reply to others clients://
         In client: ./client "print message"
 
-    -Kill server:
+    -Kill server://
         In server: "close" or "cntrl+c"
 
-    -Kill client connection:
+    -Kill client connection://
         In client: ./client "close"
 
     [TCP]
