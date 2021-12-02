@@ -1,14 +1,14 @@
 # ESRG_class
 
  * Start TCP Serve:
-./tcpserver2.elf |port| 
+./tcpserver2.elf "port" 
 
  * Open TCP Client Daemon connection:
-./daemon |Ip con||port|
+./daemon "Ip con""port"
  
  * Open TCP Client connection:
-./client |message|
--> |message| is optional. Without it just print last messages.
+./client "message"
+-> "message" is optional. Without it just print last messages.
 
  * Connection scheme:
  [SERVER]<---|TCP|---->[DEAMON CLIENT]<---|MESSAGA QUEUES|-->[CLIENT]
@@ -17,17 +17,17 @@
 
     [TCP - MESSAGE QUEUES]
     -Send a message to client:
-        In client: ./client <print message>
+        In client: ./client "print message"
 
     [MESSAGE QUEUES - TCP]    
     -Send a message to server and reply to others clients:
-        In client: ./client <print message>
+        In client: ./client "print message"
 
     -Kill server:
-        In server: |close| or "cntrl+c"
+        In server: "close" or "cntrl+c"
 
     -Kill client connection:
-        In client: ./client |close|
+        In client: ./client "close"
 
     [TCP]
     -5s to 5s server check state of client:
