@@ -10,7 +10,7 @@
 ./client "message"
 -> "message" is optional. Without it just print last messages.
 
- #Connection scheme:
+ **Connection scheme:
  [SERVER]<---|TCP|---->[DEAMON CLIENT]<---|MESSAGA QUEUES|-->[CLIENT]
  
  * Options available:
