@@ -35,8 +35,8 @@
         Daemon reply with state.
         (dont show on terminal)
 
-    -1min to 1min after send a message the daemon client change the state to AFK if it dont sent a message;
-        (dont show on terminal)
+    -1min to 1min after send a message the daemon client change the state to AFK if it don't sent a message;
+        (don't show on terminal)
 
     [DEVICE DRIVERS]
     -When client start (daemon), the raspberry pi 4 led on
