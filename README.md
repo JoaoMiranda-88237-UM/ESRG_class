@@ -24,10 +24,10 @@
         In client: ./client <print message>
 
     -Kill server:
-        In server: <close> or "cntrl+c"
+        In server: |close| or "cntrl+c"
 
     -Kill client connection:
-        In client: ./client <close>
+        In client: ./client |close|
 
     [TCP]
     -5s to 5s server check state of client:
