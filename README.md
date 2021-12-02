@@ -1,5 +1,10 @@
 # ESRG_class
-
+ * Execute MAKEFILE {make all}
+    
+    - CC_h - Compile to host
+    - CC_r - Compile to rasp (change directory according the folder distribution)
+         -> IP - change IP according information in ifconfig
+         
  * Start TCP Server:
 ./tcpserver2.elf "port" 
 
