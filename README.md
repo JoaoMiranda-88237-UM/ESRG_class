@@ -11,7 +11,7 @@
 -> "message" is optional. Without it just print last messages.
 
  **Connection scheme:
- [SERVER]<---|TCP|---->[DEAMON CLIENT]<---|MESSAGA QUEUES|-->[CLIENT]
+ [SERVER]<---|TCP|---->[DEAMON CLIENT]<---|MESSAGA QUEUES|-->[CLIENT]**
  
  * Options available:
 
