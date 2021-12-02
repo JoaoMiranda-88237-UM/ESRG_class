@@ -1,12 +1,12 @@
 # ESRG_class
 
- * Start TCP Server
+ * Start TCP Serve:
 ./tcpserver2.elf <port> 
 
- * Open TCP Client Daemon connection
+ * Open TCP Client Daemon connection:
 ./daemon <Ip con><port>
  
- * Open TCP Client connection
+ * Open TCP Client connection:
 ./client <message>
 -> <message> is optional. Without it just print last messages.
 
