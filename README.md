@@ -3,8 +3,7 @@
     
     - CC_h - Compile to host
     - CC_r - Compile to rasp (change directory)
-    - 
-         -> IP - change IP according information in ifconfig
+    - IP - change IP according information in ifconfig
          
  * Start TCP Server:
 ./tcpserver2.elf "port" 
