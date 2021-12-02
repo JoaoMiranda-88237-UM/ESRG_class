@@ -14,7 +14,7 @@ server: server.c ucmd.c
 
 %CC_r -> client[RASP] | CC_h -> client[HOST]
 $(OBJS): %.elf: %.c
-	$(CC_r) -o $@ $< $(CFLAGS)
+	$(CC_h) -o $@ $< $(CFLAGS)
 
 all:$(OBJS) server daemon
 
