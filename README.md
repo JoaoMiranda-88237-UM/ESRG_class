@@ -12,7 +12,7 @@ Each Client is connected to the Server via TCP/IP. After the connection is estab
 
 #### Interconnection
 
-![alt text](https://github.com/JoaoMiranda-88237-UM/ESRG_class/blob/main/Interconnection.png?raw=true)
+![alt text](https://github.com/JoaoMiranda-88237-UM/ESRG_class/blob/main/Images/Interconnection.png?raw=true)
 
 ## How to use?
 ### 1. Installation
@@ -47,5 +47,7 @@ Type 'close', or use Ctrl+C.
 
 ## Done by
 João Miranda, a88237
+
 Duarte Rodrigues, a88259
+
 Masters in Embedded Systems @ Universidade do Minho, 2021
