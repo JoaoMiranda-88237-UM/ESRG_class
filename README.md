@@ -1,5 +1,5 @@
 # ERSG_class - Group menseger
-This project implements a "Broadcasting Chat service", using some features such as:
+This project implements a "Broadcasting Chat service" using some features, such as:
 * TCP-IP Client/Server; 
 * Posix threads;
 * Message Queues;
@@ -8,7 +8,7 @@ This project implements a "Broadcasting Chat service", using some features such 
 
 ## How it works?
 
-Each Client is connected to the Server via TCP/IP. After the connection is established, each client can send to the server a character string passed by argument via command line. The server after receiving the message, it forwards the received messages to all connected Clients, and identifies the client that has sent the message. In order to check the status of each connected client. Every 5 seconds the Server checks if each client is still ONLINE or AFK. (it is not shown on the terminal).
+Each Client is connected to the Server via TCP/IP. After the connection is established, each client can send to the server a character string passed by argument via command line. The server after receiving the message, it forwards the received messages to all connected Clients, and identifies the client that has sent the message. In order to check the status of each connected client, every 5 seconds the Server checks if each client is still ONLINE or AFK. (it is not shown on the terminal).
 
 #### Interconnection
 
@@ -17,6 +17,58 @@ Each Client is connected to the Server via TCP/IP. After the connection is estab
 ## How to use?
 ### 1. Installation
 
+Execute Makefile
+
+#### 1.1 Compile and create all object files
+In project folder:
+```Shell
+$ make all CC_C=<client compiler> CC_S=<server compiler> 
+```
+**Example:**
+* Compile server with **gcc**;
+* Compile client to **Raspberry Pi (arm-linux-gcc)**.
+```Shell
+$ make all CC_C=arm-linux-gcc CC_S=gcc
+```
+#### 1.2 Copy to raspberry Pi
+##### - Client 
+To copy the client executable files (transfer_client):
+```Shell
+$ make transfer_client IP=<ip connection> FOLDER=<destination folder>
+```
+**Example:**
+* IP = 10.42.0.174
+* FOLDER = etc
+```Shell
+$ make transfer_client IP=10.42.0.174 FOLDER=etc
+```
+##### - Server
+To copy the server executable files (transfer_server):
+```Shell
+$ make transfer_server IP=<ip connection> FOLDER=<destination folder>
+```
+**Example:**
+* IP = 10.42.0.174
+* FOLDER = etc
+```Shell
+$ make transfer_server IP=10.42.0.174 FOLDER=etc
+```
+##### - Server and Client
+To copy both executable files (transfer_both): 
+```Shell
+$ make transfer_both IP=<ip connection> FOLDER=<destination folder>
+```
+**Example:**
+* IP = 10.42.0.174
+* FOLDER = etc
+```Shell
+$ make transfer_both IP=10.42.0.174 FOLDER=etc
+```
+#### 1.3 Remove object files
+To remove all created object files (clean): 
+```Shell
+$ make clean
+```
 ### 2. Execution 
 #### 2.1 Start TCP server
 Starts a TCP server on a given port.
@@ -46,8 +98,6 @@ When this happens, the daemon terminates, and the led that was previously light 
 Type 'close', or use Ctrl+C.
 
 ## Done by
-João Miranda, a88237
-
-Duarte Rodrigues, a88259
-
+João Miranda, a88237 \
+Duarte Rodrigues, a88259 \
 Masters in Embedded Systems @ Universidade do Minho, 2021
