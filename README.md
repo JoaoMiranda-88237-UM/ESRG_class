@@ -90,7 +90,7 @@ $ ./client <msg[0}> <msg[1}> ... <msg[n]>
 ##### 2.4.1 On client
 Type 'close', or use Ctrl+C.
 ```shell
-$ ./tcpclient_send close
+$ ./client close
 ```
 When this happens, the daemon terminates, and the led that was previously light up (led0) is turned off.
 
