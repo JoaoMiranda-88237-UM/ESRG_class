@@ -23,7 +23,7 @@
 #include <sys/types.h>
 #include <sys/time.h>
 
-#include "ucmd.h"
+#include "../Parser/ucmd.h"
 
 #define MSGQOBJ_D_C    "/d_c_queue"
 #define MSGQOBJ_C_D    "/c_d_queue"

@@ -22,7 +22,7 @@
 
 #include <fcntl.h>
 
-#include "ucmd.h"
+#include "../Parser/ucmd.h"
 
 void panic(char *msg);
 #define panic(m)	{perror(m); abort();}
