@@ -12,9 +12,9 @@ daemon: daemon.c ucmd.c
 server: server.c ucmd.c
 	$(CC_h) -pthread -o server.elf server.c ucmd.c $(CFLAGS)
 
-%CC_r -> client[RASP] | CC_h -> client[HOST]
+#CC_r -> client[RASP] | CC_h -> client[HOST]
 $(OBJS): %.elf: %.c
-	$(CC_r) -o $@ $< $(CFLAGS)
+	$(CC_h) -o $@ $< $(CFLAGS)
 
 all:$(OBJS) server daemon
 
