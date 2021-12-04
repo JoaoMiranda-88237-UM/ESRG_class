@@ -8,7 +8,7 @@ This project implements a "Broadcasting Chat service" using some features, such 
 
 ## How it works?
 
-Each Client is connected to the Server via TCP/IP. After the connection is established, each client can send to the server a character string passed by argument via command line. The server after receiving the message, it forwards the received messages to all connected Clients, and identifies the client that has sent the message. In order to check the status of each connected client, every 5 seconds the Server checks if each client is still ONLINE or AFK. (it is not shown on the terminal).
+Each Client is connected to the Server via TCP/IP. After the connection is established, each client can send to the server a character string passed by argument via command line. The server after receiving the message, it forwards the received messages to all connected Clients, identifying the client that has sent the message. In order to check the status of each connected client, every 5 seconds the Server checks if each client is still ONLINE or AFK (the message exchange  is not shown on the terminal).
 
 #### Interconnection
 
@@ -26,7 +26,7 @@ $ make all CC_C=<client compiler> CC_S=<server compiler>
 ```
 **Example:**
 * Compile server with **gcc**;
-* Compile client to **Raspberry Pi (arm-linux-gcc)**.
+* Compile client with **arm-linux-gcc (Raspberry Pi)**.
 ```Shell
 $ make all CC_C=arm-linux-gcc CC_S=gcc
 ```
@@ -64,8 +64,8 @@ $ make transfer_both IP=<ip connection> FOLDER=<destination folder>
 ```Shell
 $ make transfer_both IP=10.42.0.174 FOLDER=etc
 ```
-#### 1.3 Remove object files
-To remove all created object files (clean): 
+#### 1.3 Remove executable files
+To remove all created executable files (clean): 
 ```Shell
 $ make clean
 ```
@@ -76,13 +76,13 @@ Starts a TCP server on a given port.
 $ ./server <port>
 ```
 #### 2.2 Start Daemon client
-Starts a TCP client connected to a given server name on a given port.
+Starts a TCP client connected to a given IP on a given port.
 ```Shell
-$ ./daemon <servername> <port> 
+$ ./daemon <ip> <port> 
 ```
 When this is running, a led (led0 - green led in Raspberry Pi) is light up. This is done via a device driver, developed in previous classes.
 #### 2.3 Client - Send message / see received messages
-Send message to server or to see messages that have been send to the client since last time. Everytime the user wants to send a message he must use client with the wanted message to be sent. 
+Send message to server or to see messages that have been send to the client since last time. Everytime the user wants to send a message he must use client with the wanted messages to be sent. 
 ```shell
 $ ./client <msg[0}> <msg[1}> ... <msg[n]>
 ```
@@ -95,7 +95,7 @@ $ ./client close
 When this happens, the daemon terminates, and the led that was previously light up (led0) is turned off.
 
 ##### 2.4.2  On server
-Type 'close', or use Ctrl+C.
+Type 'close', or use Ctrl+C. Terminates all clients connection before closing the server.
 
 ## Done by
 João Miranda, a88237 \
